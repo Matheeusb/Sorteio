@@ -39,9 +39,6 @@ public class Grupo {
             forcaTotal += j.getForca();
         }
         forcaMedia = forcaTotal / jogadores.size();
-//        System.out.println("##### Força (0.0 à 5.0) #####");
-//        System.out.println("A força média do grupo é " + forcaMedia);
-//        System.out.println("#### #### #### #### #### ####");
     }
 
     public static void calculaMediaIdade() {

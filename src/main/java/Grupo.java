@@ -13,7 +13,7 @@ public class Grupo {
     static double forcaMedia;
     static int idadeMedia;
 
-    public static void criaGrupo() {
+    public void criaGrupo() {
         jogadores.clear();
         jogadores.add(new Jogador("Matheus", 24, "Zagueiro", 3));
         jogadores.add(new Jogador("Lucas", 19, "Zagueiro", 4));
@@ -30,6 +30,7 @@ public class Grupo {
 
         calculaMediaForca();
         calculaMediaIdade();
+        separaPosicoes();
     }
 
     public static void calculaMediaForca() {
@@ -38,6 +39,9 @@ public class Grupo {
             forcaTotal += j.getForca();
         }
         forcaMedia = forcaTotal / jogadores.size();
+//        System.out.println("##### Força (0.0 à 5.0) #####");
+//        System.out.println("A força média do grupo é " + forcaMedia);
+//        System.out.println("#### #### #### #### #### ####");
     }
 
     public static void calculaMediaIdade() {
@@ -46,6 +50,9 @@ public class Grupo {
             idadeTotal += j.getIdade();
         }
         idadeMedia = idadeTotal / jogadores.size();
+//        System.out.println("##### Idade Média Grupo #####");
+//        System.out.println("A idade média do grupo é de " + idadeMedia + " anos de idade");
+//        System.out.println("#### #### #### #### #### ####");
     }
 
     public void separaPosicoes() {

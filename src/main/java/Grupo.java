@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Grupo {
 
-    static List<Jogador> jogadores = new ArrayList<Jogador>();
+    List<Jogador> jogadores = new ArrayList<Jogador>();
     List goleiros = new ArrayList();
     List zagueiros = new ArrayList();
     List meioCampos = new ArrayList();
@@ -33,7 +33,7 @@ public class Grupo {
         separaPosicoes();
     }
 
-    public static void calculaMediaForca() {
+    public void calculaMediaForca() {
         double forcaTotal = 0;
         for (Jogador j : jogadores) {
             forcaTotal += j.getForca();
@@ -41,7 +41,7 @@ public class Grupo {
         forcaMedia = forcaTotal / jogadores.size();
     }
 
-    public static void calculaMediaIdade() {
+    public void calculaMediaIdade() {
         int idadeTotal = 0;
         for (Jogador j : jogadores) {
             idadeTotal += j.getIdade();

@@ -15,7 +15,9 @@ public class ExecutaSorteio {
         System.out.println("##Formação Time Preto:");
         System.out.println(sorteio.timePreto);
 
-        sorteio.estaParelho();
+//        sorteio.estaParelho();
+        sorteio.getForcaTime(sorteio.timePreto);
+        sorteio.getForcaTime(sorteio.timeAmarelo);
 
 //        System.out.println(grupo.goleiros);
 //        System.out.println(grupo.zagueiros);

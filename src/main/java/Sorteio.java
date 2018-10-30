@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Sorteio extends Grupo {
 
-    List<Jogador> timeAmarelo = new ArrayList();
-    List<Jogador> timePreto = new ArrayList();
+    List<Jogador> timeAmarelo = new ArrayList<Jogador>();
+    List<Jogador> timePreto = new ArrayList<Jogador>();
     double forcaTotalAmarelo = 0;
     double forcaTotalPreto = 0;
 
@@ -23,15 +23,16 @@ public class Sorteio extends Grupo {
     }
 
     public void estaParelho() {
-        for(Jogador j : timeAmarelo) {
-            forcaTotalAmarelo += j.getForca();
+        int i;
+        for(Jogador j : timeAmarelo; i++) {
+            forcaTotalAmarelo += timeAmarelo.get().getForca();
         }
-
-        for(Jogador j : timePreto) {
-            forcaTotalPreto += j.getForca();
+        for(i = 0; i == timePreto.size(); i++) {
+            forcaTotalPreto += timePreto.get(i).getForca();
         }
-
         double diferenca = Double.compare(forcaTotalAmarelo, forcaTotalPreto);
+        System.out.println(forcaTotalAmarelo);
+        System.out.println(forcaTotalPreto);
         System.out.println(diferenca);
     }
 }

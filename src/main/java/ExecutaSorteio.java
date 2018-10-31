@@ -15,15 +15,15 @@ public class ExecutaSorteio {
         System.out.println("##Formação Time Preto:");
         System.out.println(sorteio.timePreto);
 
-//        sorteio.estaParelho();
+        sorteio.estaParelho(sorteio.timeAmarelo, sorteio.timePreto);
 //        sorteio.getForcaTime(sorteio.timePreto);
 //        sorteio.getForcaTime(sorteio.timeAmarelo);
 
-        System.out.println("##################");
-        System.out.println("#######GRUPO######");
-        System.out.println(grupo.goleiros);
-        System.out.println(grupo.zagueiros);
-        System.out.println(grupo.meioCampos);
-        System.out.println(grupo.atacantes);
+//        System.out.println("##################");
+//        System.out.println("#######GRUPO######");
+//        System.out.println(grupo.goleiros);
+//        System.out.println(grupo.zagueiros);
+//        System.out.println(grupo.meioCampos);
+//        System.out.println(grupo.atacantes);
     }
 }

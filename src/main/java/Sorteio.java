@@ -10,7 +10,17 @@ public class Sorteio extends Grupo {
     double forcaTotalA = 0;
     double forcaTotalB = 0;
 
-    public void montaTimes(List<Jogador> lista) {
+    public void montaTimes(List<Jogador> goleiros, List<Jogador> zagueiros,
+                           List<Jogador> meioCampos, List<Jogador> atacantes,
+                           List<Jogador> timeA, List<Jogador> timeB) {
+        separaPorPosicoes(goleiros);
+        separaPorPosicoes(zagueiros);
+        separaPorPosicoes(meioCampos);
+        separaPorPosicoes(atacantes);
+        calculaForca(timeA, timeB);
+    }
+
+    public void separaPorPosicoes(List<Jogador> lista) {
         Collections.shuffle(lista, new Random(System.currentTimeMillis()));
         int i;
         for (i = 0; i < lista.size(); i++) {
@@ -22,7 +32,8 @@ public class Sorteio extends Grupo {
         }
     }
 
-    public void estaParelho(List<Jogador> timeA, List<Jogador> timeB) {
+    public boolean calculaForca(List<Jogador> timeA, List<Jogador> timeB) {
+        boolean resultado;
         forcaTotalA = 0.0;
         for (Jogador j : timeA) {
             forcaTotalA += j.getForca();
@@ -32,9 +43,12 @@ public class Sorteio extends Grupo {
             forcaTotalB += j.getForca();
         }
         double diferenca = forcaTotalA - forcaTotalB;
-        System.out.println(forcaTotalA);
-        System.out.println(forcaTotalB);
-        System.out.println(diferenca);
+        if(diferenca > 2.0 || diferenca < -2.0) {
+            resultado = false;
+        } else {
+            resultado = true;
+        }
+        return resultado;
     }
 }
 

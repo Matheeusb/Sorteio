@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class Grupo {
 
-    static List<Jogador> jogadores = new ArrayList<Jogador>();
-    List goleiros = new ArrayList();
-    List zagueiros = new ArrayList();
-    List meioCampos = new ArrayList();
-    List atacantes = new ArrayList();
+    List<Jogador> jogadores = new ArrayList<Jogador>();
+    List<Jogador> goleiros = new ArrayList<Jogador>();
+    List<Jogador> zagueiros = new ArrayList<Jogador>();
+    List<Jogador> meioCampos = new ArrayList<Jogador>();
+    List<Jogador> atacantes = new ArrayList<Jogador>();
     static double forcaMedia;
     static int idadeMedia;
 
@@ -33,7 +33,7 @@ public class Grupo {
         separaPosicoes();
     }
 
-    public static void calculaMediaForca() {
+    public void calculaMediaForca() {
         double forcaTotal = 0;
         for (Jogador j : jogadores) {
             forcaTotal += j.getForca();
@@ -41,27 +41,24 @@ public class Grupo {
         forcaMedia = forcaTotal / jogadores.size();
     }
 
-    public static void calculaMediaIdade() {
+    public void calculaMediaIdade() {
         int idadeTotal = 0;
         for (Jogador j : jogadores) {
             idadeTotal += j.getIdade();
         }
         idadeMedia = idadeTotal / jogadores.size();
-//        System.out.println("##### Idade Média Grupo #####");
-//        System.out.println("A idade média do grupo é de " + idadeMedia + " anos de idade");
-//        System.out.println("#### #### #### #### #### ####");
     }
 
     public void separaPosicoes() {
         for (Jogador j : jogadores) {
             if (j.getPosicao() == "Goleiro") {
-                this.goleiros.add(j.getNome());
+                this.goleiros.add(j);
             } else if (j.getPosicao() == "Zagueiro") {
-                this.zagueiros.add(j.getNome());
+                this.zagueiros.add(j);
             } else if (j.getPosicao() == "Meio") {
-                this.meioCampos.add(j.getNome());
+                this.meioCampos.add(j);
             } else if (j.getPosicao() == "Atacante") {
-                this.atacantes.add(j.getNome());
+                this.atacantes.add(j);
             }
         }
     }

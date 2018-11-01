@@ -5,18 +5,16 @@ public class ExecutaSorteio {
         grupo.criaGrupo();
 
         Sorteio sorteio = new Sorteio();
-        sorteio.montaTimes(grupo.goleiros);
-        sorteio.montaTimes(grupo.zagueiros);
-        sorteio.montaTimes(grupo.meioCampos);
-        sorteio.montaTimes(grupo.atacantes);
+        sorteio.montaTimes(grupo.goleiros, grupo.zagueiros, grupo.meioCampos,
+                grupo.atacantes, sorteio.timeAmarelo, sorteio.timePreto);
 
         System.out.println("##Formação Time Amarelo:");
-        System.out.println(sorteio.timeAmarelo);
+//        sorteio.apresentaTimes(sorteio.timeAmarelo);
         System.out.println("##Formação Time Preto:");
-        System.out.println(sorteio.timePreto);
+//        sorteio.apresentaTimes(sorteio.timePreto);
 
-        sorteio.estaParelho();
-
+//        System.out.println("##################");
+//        System.out.println("#######GRUPO######");
 //        System.out.println(grupo.goleiros);
 //        System.out.println(grupo.zagueiros);
 //        System.out.println(grupo.meioCampos);

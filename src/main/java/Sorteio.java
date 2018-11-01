@@ -24,12 +24,12 @@ public class Sorteio extends Grupo {
              separaPorPosicoes(atacantes);
              comparaForca(timeA, timeB);
              comparaIdade(timeA, timeB);
-             System.out.println("###Formação do time amarelo");
-             apresentaTimes(timeA);
-             System.out.println("###Formação do time preto");
-             apresentaTimes(timeB);
          } while (comparaForca(timeA, timeB) == false && comparaIdade(timeA, timeB) == false);
             System.out.println("Sorteio executado com sucesso!");
+            System.out.println("###Formação do time amarelo");
+            apresentaTimes(timeA);
+            System.out.println("###Formação do time preto");
+            apresentaTimes(timeB);
             System.out.println("Força total time A: " + forcaTotalA);
             System.out.println("Força total time B: " + forcaTotalB);
             System.out.println("Idade média do time A: " + idadeTotalA / timeA.size() + " anos");

@@ -8,16 +8,5 @@ public class ExecutaSorteio {
         sorteio.montaTimes(grupo.goleiros, grupo.zagueiros, grupo.meioCampos,
                 grupo.atacantes, sorteio.timeAmarelo, sorteio.timePreto);
 
-        System.out.println("##Formação Time Amarelo:");
-//        sorteio.apresentaTimes(sorteio.timeAmarelo);
-        System.out.println("##Formação Time Preto:");
-//        sorteio.apresentaTimes(sorteio.timePreto);
-
-//        System.out.println("##################");
-//        System.out.println("#######GRUPO######");
-//        System.out.println(grupo.goleiros);
-//        System.out.println(grupo.zagueiros);
-//        System.out.println(grupo.meioCampos);
-//        System.out.println(grupo.atacantes);
     }
 }

@@ -25,15 +25,17 @@ public class Sorteio extends Grupo {
              comparaForca(timeA, timeB);
              comparaIdade(timeA, timeB);
          } while (comparaForca(timeA, timeB) == false && comparaIdade(timeA, timeB) == false);
-            System.out.println("Sorteio executado com sucesso!");
-            System.out.println("###Formação do time amarelo");
+            System.out.println("#####Formação do Time Amarelo#####");
             apresentaTimes(timeA);
-            System.out.println("###Formação do time preto");
+            System.out.println("");
+            System.out.println("#####Formação do Time Preto#####");
             apresentaTimes(timeB);
-            System.out.println("Força total time A: " + forcaTotalA);
-            System.out.println("Força total time B: " + forcaTotalB);
-            System.out.println("Idade média do time A: " + idadeTotalA / timeA.size() + " anos");
-            System.out.println("Idade média do time B: " + idadeTotalB / timeB.size() + " anos");
+            System.out.println("");
+            System.out.println("Força Total Time Amarelo: " + forcaTotalA);
+            System.out.println("Força Total Time Preto: " + forcaTotalB);
+            System.out.println("");
+            System.out.println("Idade Média do Time Amarelo: " + idadeTotalA / timeA.size() + " anos");
+            System.out.println("Idade Média do Time Preto: " + idadeTotalB / timeB.size() + " anos");
     }
 
     public void separaPorPosicoes(List<Jogador> lista) {
@@ -59,7 +61,7 @@ public class Sorteio extends Grupo {
             forcaTotalB += j.getForca();
         }
         double diferenca = forcaTotalA - forcaTotalB;
-        if(diferenca <= 2.0 || diferenca <= -2.0) {
+        if(diferenca > 2.0) {
             resultado = false;
         } else {
             resultado = true;
@@ -78,7 +80,7 @@ public class Sorteio extends Grupo {
             idadeTotalB += j.getIdade();
         }
         int diferenca = idadeTotalA / timeA.size() - idadeTotalB / timeB.size();
-        if(diferenca > 5 || diferenca < -5) {
+        if(diferenca > 5) {
             resultado = false;
         } else {
             resultado = true;
